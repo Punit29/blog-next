@@ -10,15 +10,14 @@ import styles from '../../styles/[id].module.css';
 export default function Article() {
   const Router = useRouter();
   const path = Router.asPath;
-  const url = `https://mixd-blog.herokuapp.com/api${path}`;
-
+  const url = `https://blogged-for-you.herokuapp.com/api/${path}`;
+  
   const { data, error } = useSWR(url);
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
 
   const article = data;
-  // const imagePath = `https://mixd-blog.herokuapp.com/images/${article.id}.jpeg`;
 
   return (
     <>
@@ -30,7 +29,6 @@ export default function Article() {
           <span> {article.userTable.name.toUpperCase()} </span>
         </div>
 
-        {/* <Image src={imagePath} height={256} width={1000} alt="Cover Image" /> */}
         <p dangerouslySetInnerHTML={{ __html: marked(article.markdown) }} />
         <Link href="/">
           <a className="center">

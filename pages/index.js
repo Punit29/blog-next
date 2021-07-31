@@ -5,7 +5,7 @@ import ArticleGrid from '../components/ArticleGrid';
 import SearchBar from '../components/SearchBar';
 
 export default function Home() {
-  const [url, setUrl] = useState('https://mixd-blog.herokuapp.com/api/posts');
+  const [url, setUrl] = useState('https://blogged-for-you.herokuapp.com/api/all-posts/');
   const { data, error } = useSWR(url);
 
   const [searchData, setSearchData] = useState({
@@ -16,8 +16,9 @@ export default function Home() {
 
   const handleSearch = ({ author, keyword, sortType }) => {
     setSearchData({ keyword, author, sortType });
+    
 
-    setUrl(`https://mixd-blog.herokuapp.com/api/search?keyword=${keyword}&author=${author}&sortType=${sortType}`);
+    setUrl(`https://blogged-for-you.herokuapp.com/api/all-posts/?author=${author}&search=${keyword}&sort=${sortType}`);
   };
 
   if (error) return <div>failed to load</div>;

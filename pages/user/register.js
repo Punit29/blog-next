@@ -22,7 +22,7 @@ export default function Register() {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
-    const response = await fetch('https://mixd-blog.herokuapp.com/api/register', {
+    const response = await fetch('https://blogged-for-you.herokuapp.com/api/register', {
       body: JSON.stringify({
         name,
         email,
@@ -50,7 +50,6 @@ export default function Register() {
 
       <div className={styles.pageDivide}>
         <div className={styles.leftSide}>
-          {/* <Image src={registerImage} alt="Image of a coder working" /> */}
         </div>
 
         <div className={`${styles.register} ${styles.rightSide}`}>

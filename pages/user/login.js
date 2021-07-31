@@ -3,10 +3,8 @@ import Cookies from 'universal-cookie';
 import router from 'next/router';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import Image from 'next/image';
 import Header from '../../components/Header';
 import styles from '../../components/LoginAndRegister.module.css';
-// import loginImage from '../../public/images/loginImage.png';
 
 export default function Login() {
   const [user, setUser] = useState({
@@ -21,7 +19,7 @@ export default function Login() {
     const password = e.target.password.value;
 
     setUser({ email, password });
-    const response = await fetch('https://mixd-blog.herokuapp.com/api/login', {
+    const response = await fetch('https://blogged-for-you.herokuapp.com/api/login', {
       body: JSON.stringify({
         email,
         password,
@@ -50,7 +48,6 @@ export default function Login() {
 
       <div className={styles.pageDivide}>
         <div className={styles.leftSide}>
-          {/* <Image src={loginImage} alt="Image of a coder working" /> */}
         </div>
 
         <div className={`${styles.rightSide} ${styles.login}`}>

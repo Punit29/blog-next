@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import router from 'next/router';
-// import Date from './date';
 import styles from './ArticleCards.module.css';
 
 export default function ArticleCards({ article, handleDelete }) {
@@ -15,11 +14,9 @@ export default function ArticleCards({ article, handleDelete }) {
     handleDelete(article.id, article.title);
   };
 
-  // const imagePath = `https://mixd-blog.herokuapp.com/images/${article.id}.jpeg`;
   return (
     <div className={styles.articleSection}>
       <div>
-        {/* <Image src={imagePath} height={256} width={280} layout="intrinsic" alt="Cover Image" /> */}
 
         <h3>
           {' '}
@@ -30,10 +27,9 @@ export default function ArticleCards({ article, handleDelete }) {
       </div>
       <div>
         <span>
-          {/* <Date dateString={article.date} /> */}
         </span>
         &nbsp;|&nbsp;
-        <span> {article.userTable.name} </span>
+        {/* <span> {article.userTable.name} </span> */}
         {localStorage.getItem('isLogged') === 'true' ? (
           <div>
             <button className={styles.spanBtn} type="button" name="edit" onClick={(e) => editArticle(e)}>

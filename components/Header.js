@@ -10,15 +10,12 @@ export default function Header() {
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" /> */}
         <title> Blog </title>
-        {/* <link rel="icon" href="/images/logo.svg" type="image/icon type" /> */}
       </Head>
       <header>
         <h1>
           {' '}
           BLOG
-          {/* <img src="/images/logo.svg" alt="A logo" width="50px" /> MIXD{' '} */}
         </h1>
       </header>
     </>

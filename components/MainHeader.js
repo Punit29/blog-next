@@ -12,7 +12,7 @@ const handleLogout = () => {
   router.push(`/`);
 };
 const handleHomeRoute = (setUrl) => {
-  setUrl('https://mixd-blog.herokuapp.com/api/posts');
+  setUrl('https://blogged-for-you.herokuapp.com/api/all-posts/');
 };
 export default function Header({ setUrl }) {
   const Router = useRouter();
@@ -26,8 +26,7 @@ export default function Header({ setUrl }) {
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        {/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" /> */}
-        <title> Mixd </title>
+        <title> Blog </title>
         <link rel="icon" href="/images/logo.svg" type="image/icon type" />
       </Head>
 
@@ -35,7 +34,6 @@ export default function Header({ setUrl }) {
         <h1>
           {' '}
           BLOG
-          {/* <img src="/images/logo.svg" className={styles.logo} alt="A logo" width="50px" /> <Link href="/"> MIXD</Link> */}
         </h1>
 
         <div className={styles.navigation}>

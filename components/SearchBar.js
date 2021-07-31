@@ -8,7 +8,7 @@ export default function SearchBar({ searchData, handleSearch }) {
   const [author, setAuthor] = useState(() => searchData.author);
   const [sortType, setSortType] = useState(() => searchData.sortType);
 
-  const url = 'https://mixd-blog.herokuapp.com/api/authorList';
+  const url = 'https://blogged-for-you.herokuapp.com/api/authors';
 
   const { data, error } = useSWR(url);
 
