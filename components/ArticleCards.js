@@ -29,7 +29,7 @@ export default function ArticleCards({ article, handleDelete }) {
         <span>
         </span>
         &nbsp;|&nbsp;
-        {/* <span> {article.userTable.name} </span> */}
+        <span> {article.userTable.name} </span>
         {localStorage.getItem('isLogged') === 'true' ? (
           <div>
             <button className={styles.spanBtn} type="button" name="edit" onClick={(e) => editArticle(e)}>

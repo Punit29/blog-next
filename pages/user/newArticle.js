@@ -18,7 +18,7 @@ export default function NewArticle() {
     formData.append('markdown', event.target.markdown.value);
     formData.append('authorId', cookies.get('userId'));
     formData.append('img', file);
-    const submittedData = await fetch('https://blogged-for-you.herokuapp.com/api/posts/', {
+    const submittedData = await fetch('https://mixd-blog.herokuapp.com/api/posts', {
       body: formData,
       headers: {
         Authorization: token,

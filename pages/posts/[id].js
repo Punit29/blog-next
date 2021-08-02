@@ -10,7 +10,7 @@ import styles from '../../styles/[id].module.css';
 export default function Article() {
   const Router = useRouter();
   const path = Router.asPath;
-  const url = `https://blogged-for-you.herokuapp.com/api/${path}`;
+  const url = `https://mixd-blog.herokuapp.com/api${path}`;
   
   const { data, error } = useSWR(url);
 

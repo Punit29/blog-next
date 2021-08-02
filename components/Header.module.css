@@ -1,9 +1,11 @@
 .navigation{
     display: flex;
     font-size: 1.5em;
+    background-color: bisque;
     margin-top: 15px;
   }
   .navigation button{
+    background-color: bisque;
     border: none;
     font-weight: 500;
     font-size: 1em;

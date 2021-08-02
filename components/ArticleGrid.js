@@ -8,14 +8,14 @@ export default function ArticleGrid({ data }) {
     const cookies = new Cookies();
     const token = cookies.get('jwtToken');
 
-    const res = await fetch(`https://blogged-for-you.herokuapp.com/api/posts/{id}`, {
+    const res = await fetch(`https://mixd-blog.herokuapp.com/api/posts/${id}`, {
       headers: {
         Authorization: token,
       },
       method: 'DELETE',
     });
     if (res.status === 200) {
-      mutate('https://blogged-for-you.herokuapp.com/api/all-posts/');
+      mutate('https://mixd-blog.herokuapp.com/api/posts');
       toast.error(`Article ${title} deleted successfully `, { position: toast.POSITION.TOP_CENTER, autoClose: 5000 });
     }
   };

@@ -20,7 +20,7 @@ export default function EditArticle({ article }) {
     if (file) {
       formData.append('img', file);
     }
-    const submittedData = await fetch(`https://blogged-for-you.herokuapp.com/api/posts/${article.id}`, {
+    const submittedData = await fetch(`https://mixd-blog.herokuapp.com/api/posts/${article.id}`, {
       body: formData,
       headers: {
         Authorization: token,

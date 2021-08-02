@@ -9,6 +9,7 @@ body{
 header{
   width: 80vw;
   display: flex;
+  background-color: bisque;
   flex-direction: row;
   justify-content: space-between;
   border-bottom: 1px solid grey;
@@ -25,6 +26,7 @@ a{
 header  span{ 
   margin:0.75em;
   margin-bottom:0;
+  background-color: bisque;
 }
 
 h1{
@@ -32,7 +34,6 @@ h1{
   font-size: 3em;
   letter-spacing: 2.5px;
   margin-bottom: 0;
-
 }
 h2{
   display: flex;

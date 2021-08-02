@@ -2,10 +2,8 @@ import Link from 'next/link';
 import router from 'next/router';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import Image from 'next/image';
 import Header from '../../components/Header';
 import styles from '../../components/LoginAndRegister.module.css';
-// import registerImage from '../../public/images/registerImage.png';
 
 export default function Register() {
   const [user, setUser] = useState({
@@ -22,7 +20,7 @@ export default function Register() {
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
 
-    const response = await fetch('https://blogged-for-you.herokuapp.com/api/register', {
+    const response = await fetch('https://mixd-blog.herokuapp.com/api/register', {
       body: JSON.stringify({
         name,
         email,

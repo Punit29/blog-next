@@ -12,7 +12,7 @@ const handleLogout = () => {
   router.push(`/`);
 };
 const handleHomeRoute = (setUrl) => {
-  setUrl('https://blogged-for-you.herokuapp.com/api/all-posts/');
+  setUrl('https://mixd-blog.herokuapp.com/api/posts');
 };
 export default function Header({ setUrl }) {
   const Router = useRouter();

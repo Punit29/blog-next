@@ -19,7 +19,7 @@ export default function Login() {
     const password = e.target.password.value;
 
     setUser({ email, password });
-    const response = await fetch('https://blogged-for-you.herokuapp.com/api/login', {
+    const response = await fetch('https://mixd-blog.herokuapp.com/api/login', {
       body: JSON.stringify({
         email,
         password,
